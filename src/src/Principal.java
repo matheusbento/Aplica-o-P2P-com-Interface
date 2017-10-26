@@ -62,6 +62,7 @@ public class Principal extends javax.swing.JFrame {
         btn_upload = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         table_catalogo = new javax.swing.JTable();
+        btn_att = new javax.swing.JButton();
         painel_log = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         logText = new javax.swing.JTextArea();
@@ -163,6 +164,13 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(table_catalogo);
 
+        btn_att.setText("Atualizar Catálogo");
+        btn_att.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_attActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout painel_componentesLayout = new javax.swing.GroupLayout(painel_componentes);
         painel_componentes.setLayout(painel_componentesLayout);
         painel_componentesLayout.setHorizontalGroup(
@@ -173,19 +181,22 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painel_componentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_download, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_upload, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn_upload, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_att, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         painel_componentesLayout.setVerticalGroup(
             painel_componentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(painel_componentesLayout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
-                .addGroup(painel_componentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addGroup(painel_componentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(painel_componentesLayout.createSequentialGroup()
-                        .addGap(7, 7, 7)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_att)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_download, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_upload, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -202,7 +213,7 @@ public class Principal extends javax.swing.JFrame {
         );
         painel_logLayout.setVerticalGroup(
             painel_logLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -306,6 +317,11 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_uploadActionPerformed
 
+    private void btn_attActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_attActionPerformed
+           atualizarTabela();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_attActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -344,6 +360,7 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField bindport;
     private javax.swing.JTextField bootport;
+    private javax.swing.JButton btn_att;
     private javax.swing.JButton btn_download;
     private javax.swing.JButton btn_entrar;
     private javax.swing.JButton btn_upload;
